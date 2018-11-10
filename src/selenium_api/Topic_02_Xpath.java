@@ -105,6 +105,10 @@ public class Topic_02_Xpath {
  		
  	}
   @Test
+	public void TC_07_CheckUrlAndTitle() {
+	 
+	}
+  @Test
  	public void TC_06_RegisterToSystem() {
 	  String firstname="selenium ", lastname="online07" , password = "123123" , email ="seleniumonline" + randomEmail() + "@gmail.com" ;
 	  driver.get("http://live.guru99.com");
