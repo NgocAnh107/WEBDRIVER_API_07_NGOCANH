@@ -91,13 +91,16 @@ public class Topic_03_Exercise {
   public void TC_03_IsSelected() {
 	  driver.findElement(ageUnder18ByRadio).click();
 	 driver.findElement(interests).click();
-	  if(isControlSelected(ageUnder18ByRadio) == false) {
-		  driver.findElement(ageUnder18ByRadio).click();
-	  }
-	  if(isControlSelected(interests) == false) {
+	 
+	  Assert.assertTrue(isControlSelected(ageUnder18ByRadio));
+	  Assert.assertTrue(isControlSelected(interests));
+	  //bỏ chọn checkbox
+	  driver.findElement(interests).click();
+	  Assert.assertFalse(isControlSelected(interests));
+	  
+	  if(!isControlSelected(interests)) {
 		driver.findElement(interests).click();
-		 Assert.assertTrue(isControlSelected(ageUnder18ByRadio));
-		  Assert.assertTrue(isControlSelected(interests));
+		
 	}
 	
 	  
